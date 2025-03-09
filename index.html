@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Selector</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #121212;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        button {
+            font-size: 18px;
+            font-weight: 700;
+            padding: 15px 30px;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: 0.3s;
+            color: white;
+        }
+
+        .pc-button {
+            background-color: #2196F3;
+        }
+
+        .mobile-button {
+            background-color: #4CAF50;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Select Your Device</h1>
+    <div class="button-container">
+        <button class="pc-button" onclick="redirectTo('https://example.com/pc')">PC</button>
+        <button class="mobile-button" onclick="redirectTo('https://example.com/mobile')">Mobile</button>
+    </div>
+
+    <script>
+        function redirectTo(url) {
+            window.location.href = url;
+        }
+    </script>
+
+</body>
+</html>
